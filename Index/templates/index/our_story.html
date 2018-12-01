@@ -1,57 +1,91 @@
 {% extends 'index/base.html' %}
-
+{% load staticfiles %}
 {% block title %}Becky B - Our Story {% endblock %}
 
 {% block content %}
-<h1>This is story</h1>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" >
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">           
+            <img src="{% static 'images/beckyb_logo.jpg' %}" width="30" height="30"  alt="">
+        </a>
+        <a class="navbar-brand" href="{% url 'index' %}">Becky B.</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'our_story' %}">Our Story
+                      <span class="sr-only">(current)</span> 
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 
 <!-- Page Content -->
-<div class="container">
+<div class="container mb-5">
+  <div class="row">
+    <!-- Post Content Column -->
+    <div class="col-lg-12">
+      <!-- Title -->
+      <h1 class="mt-4">Our Story</h1>
+      <!-- Author -->
+      <p class="lead">
+        by
+        <a href="#">Founder Name</a>
+      </p>
+      <hr>
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
-        <div class="row">
-  
-          <!-- Post Content Column -->
-          <div class="col-lg-12">
-  
-            <!-- Title -->
-            <h1 class="mt-4">Post Title</h1>
-  
-            <!-- Author -->
-            <p class="lead">
-              by
-              <a href="#">Start Bootstrap</a>
-            </p>
-  
-            <hr>
-  
-            <!-- Date/Time -->
-            <p>Posted on January 1, 2018 at 12:00 PM</p>
-  
-            <hr>
-  
-            <!-- Preview Image -->
-            <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-  
-            <hr>
-  
-            <!-- Post Content -->
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-  
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-  
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-  
-            <blockquote class="blockquote">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <footer class="blockquote-footer">Someone famous in
-                <cite title="Source Title">Source Title</cite>
-              </footer>
-            </blockquote>
-  
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-  
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-  
-            <hr>
+      <hr>
+
+      <!-- Post Content -->
+      
+      <p class="text-justify">
+          There are a few things that I truly believed in. First, I believe in girl power, like Beyonce’s who runs the world, yeah that's my theme song. Second, every woman deserves to have a shoe rack filled with all their favourite fancy heels. 
+      </p>
+
+      <p class="text-justify"> 
+        Here is how it all started. My fascination towards heels is greatly demoralized when I realise how difficult it is to find a pair of heels that fit me nicely (I have size 9, so you can understand). If finding the right size already troubling, to get the right design is an even more daunting task. But I am a strong believer, woman deserve great lovely pair of heels to call their own. Thus, it began my journey in discovering ways to customize heels that not only fit to my feet, more than often it is the statement piece that shouts out my personality whenever I put them on.
+      </p>
+
+      <p class="text-justify">
+        One thing leads to another, and good thing meant to be shared, hence I decided to start this business, providing custom made to order pair of heels for every deserving ladies out there. 
+      </p>
+
+      <p class="text-justify">
+        The journey is never easy one, along the ways there are many hit and misses, paying exorbitant and unnecessary fees to middle man, getting the wrong measurement, material promised isn't delivered in the final product, designs that are pretty to look at but agonizing to wear ...... 
+        All these bad encounters and dissapointment is what I hope you will never have to come across, because I don't want these setback to rob you from getting the pairs of heels you deserve.
+      </p>
+      <blockquote class="blockquote">
+      <p class="mb-0 text-justify">
+     Come to think of it, in every highlight of our life, there will always be this pair of heels, your first curfew breaking prom night, your awkward first date that you never forget, finally landing your dream job interview after being turn down too many times…… till the day you walk down the aisle, wearing your most beautiful pair of heels, stepping into the new chapter of your life.
+      </p>
+    </blockquote>
+      <p class="text-justify">
+          In every of these moments, we want you to wear the pair of heels you truly love, heels that truly deserves you, the pair that truly yours and yours only.
+      </p>
+      <hr>
+</div>
+</div>
+</div>
+
 
 {% endblock %}
