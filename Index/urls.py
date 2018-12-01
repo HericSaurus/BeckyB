@@ -7,7 +7,8 @@ urlpatterns = [
     path('our_story', views.our_story, name='our_story'),
     path('portfolio', views.portfolio, name='portfolio'),
     #should later add on get ID<id>
-    path('portfolio/detail', views.portfolio_detail, name='portfolio_detail'),
+    path('portfolio/detail_1', views.portfolio_detail_1, name='portfolio_detail_1'),
+    
         
 
 ]
